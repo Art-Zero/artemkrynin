@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark: #222;
+    --light: #f0f8ff;
+    --accent: #EFB772;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--light);
+}
+
+/* Main */
+
+html, body {
+    font-family: "Outfit", sans-serif;
+    background-color: var(--light);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark); 
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
+}
+
+.section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+
+/* Header */
+
+#header {
+    background: var(--dark) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Nanigation */
+
+.nav {
+    margin: 25px 10px;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 25px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--light);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.logo {
+    margin: 20px 15px;
+}
+
+.greeting {
+    
+    display: flex;
+    justify-content: center;
+    color: var(--light);
+    text-align: center;
+}
+
+.greeting h1 {
+    font-size: clamp(32px, 4em, 96px);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#header .down {
+    position: relative;
+    fill: none;
+    stroke: var(--light);
+    margin: 25px 15px;
+    transition: all 0.15s ease-in-out;
+    animation: 2s infinite alternate up-down;
+}
+
+#header .down:hover {
+    stroke: var(--accent);
+}
+
+@keyframes up-down {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -15px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+/* .pulse_circle {
+    position: absolute;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    animation: 2s infinite alternate pulse;
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.5);
+    } 
+    from {
+        transform: scale(1);
+    }
+} */
+
+#about_me {
+    position: relative;
+}
+
+.link_up {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: rotate(45deg);
+    transform: translateX(-50%);
+}
+
+#about_me .up {
+    stroke: var(--dark);
+    transition: all 0.15s ease-in-out;
+}
+
+#about_me .up:hover {
+    stroke: var(--accent);
+}
