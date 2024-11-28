@@ -37,7 +37,7 @@ html, body {
 
 .section {
     scroll-snap-align: start;
-    height: 100svh;
+    height: 100dvh;
 }
 
 /* Header */
