@@ -41,6 +41,7 @@ html, body {
 /* Header */
 
 #header {
+    position: relative;
     background: var(--dark);
     height: 100dvh;
     display: flex;
@@ -117,6 +118,32 @@ html, body {
     }
 }
 
+.socials {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    row-gap: 10px;
+}
+
+.social {
+    background-color: var(--light);
+    width: clamp(40px, 5vw, 50px);
+    padding: 6px 6px;
+    border-radius: 15px;
+    transition: all 0.25s ease-in-out;
+}
+
+.social:hover {
+    background-color: var(--accent);
+}
 
 /* About me */
 
