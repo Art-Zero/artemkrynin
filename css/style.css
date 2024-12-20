@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -17,24 +17,34 @@
     display: none;
 }
 
+section {
+    margin-bottom: 40px;
+}
+
 h1 {
-    font-size: clamp(45px, 5vw, 90px);
+    font-size: clamp(45px, 5vw, 75px);
     font-weight: 400;
 }
 
 h2 {
-    font-size: clamp(30px, 3vw, 55px);
+    font-size: clamp(30px, 3vw, 50px);
     font-weight: 300;
+}
+
+p {
+    font-size: clamp(20px, 2vw, 30px);
+    font-weight: 400;
 }
 
 .container {
     max-width: calc(1320px - 30px);
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 html, body {
-    font-family: "Outfit", sans-serif;
+    font-family: "Onest", sans-serif;
     background-color: var(--light);
     overflow-x: hidden;
 }
@@ -50,7 +60,10 @@ html, body {
     align-items: center;
     justify-content: space-between;
     color: var(--light);
+    margin-bottom: 40px;
 }
+
+    /* Nav */
 
 .nav {
     display: flex;
@@ -83,7 +96,7 @@ html, body {
     margin: 0 20px;
 }
 
-/* Menu for Mobile */
+        /* Menu for Mobile */
 
 .burger-menu {
     position: relative;
@@ -130,11 +143,14 @@ html, body {
     transform: translateY(-50%) rotate(-45deg);
 }
 
+    /* Header content */
+
 .greeting {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0 15px;
 }
 
 #header .down {
@@ -164,6 +180,8 @@ html, body {
     }
 }
 
+    /* Social link */
+
 .socials {
     position: absolute;
     right: 25px;
@@ -177,6 +195,17 @@ html, body {
     align-items: center;
     list-style: none;
     row-gap: 10px;
+}
+
+.social-list li {
+    position: relative;
+}
+
+.social-list li[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: -20px;
+    bottom: -12px;
 }
 
 .social {
@@ -195,5 +224,24 @@ html, body {
 
 #about_me {
     background-color: var(--light);
-    height: 100dvh;
+}
+
+.about_me-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 30px;
+}
+
+.my_photo {
+    width: clamp(300px, 45%, 600px);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2)
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 20px;
 }
