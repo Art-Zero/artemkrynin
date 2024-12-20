@@ -2,21 +2,31 @@
 
 const nav = document.querySelector(".nav")
 const burger_menu = document.querySelector(".burger-menu")
+const nav_links = document.querySelectorAll(".nav-link")
 
-burger_menu.addEventListener("click", () => {
+const navOpen = () => {
     if(nav.classList.contains("open")) {
         nav.classList.remove("open")
     } else {
         nav.classList.add("open")
     }
-    
+}
+
+burger_menu.addEventListener("click", () => {
+    navOpen()
 })
 
+nav_links.forEach(nav_link => {
+    nav_link.addEventListener("click", () => {
+        navOpen()
+    })
+})
 
+// --------------------------------------------
 
 const me = document.getElementById("me");
 
-const textArr = ["Developer", "Designer", "Imposer"]
+const textArr = ["Разработчик", "Дизайнер", "Верстальщик"]
 let textIndex = 0
 let charIndex = 0
 
