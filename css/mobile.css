@@ -29,4 +29,13 @@
     .nav.open .nav-list {
         top: 0;
     }
+
+    .about_me-content {
+        flex-direction: column;
+    }
+
+    .content {
+        text-align: center;
+    }
+}
 }
