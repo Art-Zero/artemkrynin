@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    scroll-padding: 40px;
 }
 
 :root {
@@ -210,7 +211,7 @@ html, body {
 
 .social {
     background-color: var(--light);
-    width: clamp(40px, 5vw, 50px);
+    width: clamp(45px, 5vw, 50px);
     padding: 6px 6px;
     border-radius: 15px;
     transition: all 0.25s ease-in-out;
@@ -231,10 +232,11 @@ html, body {
     align-items: center;
     justify-content: space-evenly;
     column-gap: 30px;
+    row-gap: 20px;
 }
 
 .my_photo {
-    width: clamp(300px, 45%, 600px);
+    width: clamp(320px, 45%, 600px);
     border-radius: 5px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2)
 }
@@ -244,4 +246,43 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     row-gap: 20px;
+}
+
+
+/* Tools */
+
+.tools-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+.tool {
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+
+.tool::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.tool:hover {
+    transform: scale(1.2);
+}
+
+.tool:nth-child(1):hover,
+.tool:nth-child(2):hover,
+.tool:nth-child(3):hover {
+    fill: var(--accent);
+}
+
+.tool:nth-child(4):hover,
+.tool:nth-child(5):hover {
+    stroke: var(--accent);
 }
